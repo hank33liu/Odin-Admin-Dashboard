@@ -5,7 +5,8 @@
 }
 
 body {
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
@@ -13,7 +14,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 220px 1fr;
-    grid-template-rows: 140px 1fr;
+    grid-template-rows: 120px 1fr;
     
 }
 
@@ -50,6 +51,94 @@ body {
 
 .header {
     background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 4fr 5fr;
+    padding: 0 60px 0 35px;
+    box-shadow: 2px 2px 3px #d2d7dd;
+    position: relative;
+}
+
+.header .top, .header .bottom {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .top .left {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header .top .left .icon {
+    width: 20px;
+}
+
+.header .top .left .search-input {
+    width: 500px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e2e8f0;
+    height: 1.5rem;
+}
+
+.header .top .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.header .top .right .icon {
+    width: 20px;
+}
+
+.header .top .right .profile {
+    width: 40px;
+}
+
+.header .bottom .main-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header .bottom .sub-text{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.header .bottom .left {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 65px 1fr;
+    align-items: center;
+}
+
+.header .bottom .left img {
+    width: 50px;
+}
+
+.header .bottom .right {
+    display: flex;
+    gap: 20px;
+}
+
+.header .bottom .right button {
+    background-color: #1992d4;
+    border: none;
+    color: white;
+    padding: 6px 0;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .main-content {
@@ -137,6 +226,12 @@ body {
     box-shadow: 2px 2px 2px #d1d6dc;
 }
 
+.announcements .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .announcements .cards .title, .trending .cards .title {
     background-color: white;
     color: black;
@@ -169,11 +264,10 @@ body {
 .trending .card {
     display: grid;
     justify-content: center;
-    grid-template-columns: 40px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 55px 1fr;
+    align-items: center;
 }
 
 .trending img {
     width: 40px;
-    grid-row: 1 / 3;
 }
